@@ -25,6 +25,6 @@ class TvShowSeeder extends Seeder
             }
         }
 
-        TvShow::factory()->count(4)->create();
+        TvShow::factory()->count(10)->create();
     }
 }
