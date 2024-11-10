@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-center text-gray-800 leading-tight">
+        <h2 class="font-semibold text-4xl text-center text-gray-800 leading-tight">
             {{ __('Piesakies TV šoviem!') }}
         </h2>
     </x-slot>
