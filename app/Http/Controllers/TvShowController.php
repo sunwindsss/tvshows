@@ -19,8 +19,12 @@ class TvShowController extends Controller
         foreach ($tvshows as $tvshow) {
             $endDate = Carbon::parse($tvshow->end_date);
             $tvshow->days_left = $today->diffInDays($endDate);
-            $tvshow->formatted_start_date = Carbon::parse($tvshow->start_date)->format('d. F');
-            $tvshow->formatted_end_date = Carbon::parse($tvshow->end_date)->format('d. F');
+            $tvshow->formatted_start_date = Carbon::parse($tvshow->start_date)
+                ->locale('lv')
+                ->translatedFormat('j. F');
+            $tvshow->formatted_end_date = Carbon::parse($tvshow->end_date)
+                ->locale('lv')
+                ->translatedFormat('j. F');
         }
 
         return view('dashboard', compact('tvshows'));

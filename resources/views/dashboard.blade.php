@@ -27,12 +27,11 @@
                             </div>
                             <div class="flex items-center gap-6">
                                 <button
-                                    class="bg-[#ff0000] text-white px-4 py-2 rounded-sm hover:bg-[#d30000] text-lg">Pieteikties!</button>
+                                    class="bg-[#ff0000] text-white px-4 py-2 rounded-sm hover:bg-[#d30000] text-lg shadow-md hover:shadow-lg transition duration-300">Pieteikties!</button>
                                 <div class="flex items-center text-black text-sm">
                                     <x-icons.calendar class="w-4 h-4 mr-1" />
                                     {{ $tvshow->formatted_start_date }} - {{ $tvshow->formatted_end_date }}
                                 </div>
-
                             </div>
                         </div>
                     </div>
