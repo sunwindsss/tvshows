@@ -62,14 +62,10 @@
                     </x-dropdown>
                 @else
                     <!-- Guest Links -->
-                    <a href="{{ route('login') }}" class="px-3 py-2 text-gray-500 hover:text-gray-700">
-                        {{ __('Log in') }}
+                    <a href="{{ route('login') }}"
+                        class="bg-[#ff0000] text-white px-4 py-1.5 rounded-sm hover:bg-[#d30000] text-sm shadow-sm hover:shadow-md transition duration-300">
+                        Pieslēdzies
                     </a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="px-3 py-2 text-gray-500 hover:text-gray-700">
-                            {{ __('Register') }}
-                        </a>
-                    @endif
                 @endauth
             </div>
 
@@ -124,13 +120,8 @@
             @else
                 <!-- Guest Links -->
                 <x-responsive-nav-link :href="route('login')">
-                    {{ __('Log in') }}
+                    Pieslēdzies
                 </x-responsive-nav-link>
-                @if (Route::has('register'))
-                    <x-responsive-nav-link :href="route('register')">
-                        {{ __('Register') }}
-                    </x-responsive-nav-link>
-                @endif
             @endauth
         </div>
     </div>
