@@ -10,7 +10,7 @@
             <!-- TV Show Blocks -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 @foreach ($tvshows as $tvshow)
-                    <div class="bg-gray-100 rounded-md overflow-hidden shadow-sm">
+                    <div class="bg-gray-100 rounded-md overflow-hidden shadow-sm flex flex-col">
                         <div class="relative pt-3 px-3">
                             <img src="{{ asset('storage/' . $tvshow->banner) }}" alt="{{ $tvshow->name }}"
                                 class="w-full h-48 object-cover">
@@ -20,9 +20,10 @@
                                 Vēl {{ $tvshow->days_left }} dienas
                             </div>
                         </div>
-                        <div class="p-3 flex flex-col justify-between h-42">
-                            <div class="mb-4">
-                                <p class="text-black text-lg leading-snug line-clamp-3">{{ $tvshow->description }}
+                        <div class="p-3 flex flex-col flex-1">
+                            <div class="mb-4 flex-grow">
+                                <p class="text-black text-lg leading-snug line-clamp-3">
+                                    {{ $tvshow->description }}
                                 </p>
                             </div>
                             <div class="flex items-center gap-6">
