@@ -135,4 +135,6 @@
             form.submit();
         }
     </script>
+
+    <x-footer />
 </x-app-layout>
