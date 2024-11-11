@@ -1,15 +1,15 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-10 pt-6">
             <div class="flex">
                 <!-- Logo and Date -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <x-application-logo class="block h-7 w-auto fill-current text-gray-800" />
                     </a>
                     <!-- Date and Namedays -->
-                    <div class="ms-8 text-gray-500 text-sm pb-2 hidden sm:block">
+                    <div class="ms-8 text-gray-500 text-xs pb-1.5 hidden sm:block">
                         {{ $fullDate }}
                         <span class="mx-2">•</span>
                         {{ implode(', ', $namedays) }}

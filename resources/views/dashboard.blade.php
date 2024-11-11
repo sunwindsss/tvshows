@@ -22,7 +22,7 @@
                         </div>
                         <div class="p-3 flex flex-col justify-between h-42">
                             <div class="mb-4">
-                                <p class="text-black text-xl leading-snug line-clamp-3">{{ $tvshow->description }}
+                                <p class="text-black text-lg leading-snug line-clamp-3">{{ $tvshow->description }}
                                 </p>
                             </div>
                             <div class="flex items-center gap-6">
