@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53bd871146f30803a26e8a7334a4aee4",
+    "content-hash": "2605494fccd87f00044037bdf05afe82",
     "packages": [
         {
             "name": "brick/math",
@@ -1824,6 +1824,59 @@
                 }
             ],
             "time": "2024-09-21T08:32:55+00:00"
+        },
+        {
+            "name": "mixislv/name-days",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mixisLv/name-days.git",
+                "reference": "cfd23e8bb9eea83b2a1b0e7cabc34c4123a6c815"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mixisLv/name-days/zipball/cfd23e8bb9eea83b2a1b0e7cabc34c4123a6c815",
+                "reference": "cfd23e8bb9eea83b2a1b0e7cabc34c4123a6c815",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/php-code-coverage": "^9.2",
+                "phpunit/phpunit": "^9.5",
+                "smalot/pdfparser": "^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mixisLv\\NameDays\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mikus Rozenbergs",
+                    "email": "mikus.rozenbergs@gmail.com"
+                }
+            ],
+            "description": "Latvian Name Days",
+            "keywords": [
+                "latvian",
+                "namedays",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/mixisLv/name-days/issues",
+                "source": "https://github.com/mixisLv/name-days/tree/2.1.0"
+            },
+            "time": "2022-04-23T19:37:31+00:00"
         },
         {
             "name": "monolog/monolog",
