@@ -12,3 +12,4 @@ if [ ! -d "$FOLDER" ]; then
     mkdir /var/www/html/storage/database
     touch /var/www/html/storage/database/database.sqlite
 fi
+
