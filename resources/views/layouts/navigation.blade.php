@@ -47,15 +47,28 @@
                         <x-slot name="content">
                             <!-- Profile Link -->
                             <x-dropdown-link :href="route('profile.edit')">
-                                {{ __('Profile') }}
+                                {{ __('Profils') }}
                             </x-dropdown-link>
+
+                            <!-- Add TV Show and Delete TV Show (only on '/' route) -->
+                            @if (request()->routeIs('dashboard'))
+                                <!-- Add TV Show -->
+                                <x-dropdown-link href="#" @click="$dispatch('open-modal', 'add-tv-show')">
+                                    {{ __('Pievienot TV Šovu') }}
+                                </x-dropdown-link>
+
+                                <!-- Delete TV Show -->
+                                <x-dropdown-link href="#" @click="$dispatch('open-modal', 'delete-tv-show')">
+                                    {{ __('Dzēst TV Šovu') }}
+                                </x-dropdown-link>
+                            @endif
 
                             <!-- Logout -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault(); this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                                    {{ __('Atteikties') }}
                                 </x-dropdown-link>
                             </form>
                         </x-slot>
@@ -105,15 +118,28 @@
                 <div class="mt-3 space-y-1">
                     <!-- Profile Link -->
                     <x-responsive-nav-link :href="route('profile.edit')">
-                        {{ __('Profile') }}
+                        {{ __('Profils') }}
                     </x-responsive-nav-link>
+
+                    <!-- Add TV Show and Delete TV Show (only on '/' route) -->
+                    @if (request()->routeIs('dashboard'))
+                        <!-- Add TV Show -->
+                        <x-responsive-nav-link href="#" @click="$dispatch('open-modal', 'add-tv-show')">
+                            {{ __('Pievienot TV Šovu') }}
+                        </x-responsive-nav-link>
+
+                        <!-- Delete TV Show -->
+                        <x-responsive-nav-link href="#" @click="$dispatch('open-modal', 'delete-tv-show')">
+                            {{ __('Dzēst TV Šovu') }}
+                        </x-responsive-nav-link>
+                    @endif
 
                     <!-- Logout -->
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault(); this.closest('form').submit();">
-                            {{ __('Log Out') }}
+                            {{ __('Atteikties') }}
                         </x-responsive-nav-link>
                     </form>
                 </div>
