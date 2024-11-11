@@ -28,7 +28,11 @@
                             </div>
                             <div class="flex items-center gap-6">
                                 <button
-                                    class="bg-[#ff0000] text-white px-4 py-2 rounded-sm hover:bg-[#d30000] text-lg shadow-md hover:shadow-lg transition duration-300">Pieteikties!</button>
+                                    class="bg-[#ff0000] text-white px-4 py-2 rounded-sm text-lg shadow-md transition duration-300 hover:bg-[#d30000] hover:shadow-lg"
+                                    @click="shake = true; setTimeout(() => shake = false, 500)"
+                                    :class="{ 'animate-shake': shake }" x-data="{ shake: false }">
+                                    Pieteikties!
+                                </button>
                                 <div class="flex items-center text-black text-sm">
                                     <x-icons.calendar class="w-4 h-4 mr-1" />
                                     {{ $tvshow->formatted_start_date }} - {{ $tvshow->formatted_end_date }}
@@ -120,7 +124,7 @@
                         {{ __('Atcelt') }}
                     </x-secondary-button>
                     <x-danger-button class="ml-3" onclick="event.preventDefault(); deleteTvShow();">
-                        {{ __('Saglabāt') }}
+                        {{ __('Dzēst') }}
                     </x-danger-button>
                 </div>
             </div>
